@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Home Page</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validateForm(){
+			var x = document.forms["myForm"]["name"].value;
+			var y = document.forms["myForm"]["email"].value;
+			if(x == "" || y == "") {
+				document.getElementById("errorMsg").innerHTML = "Name & email must be filled out.";
+				//alert("Name must be filled.");
+				return false;
+			}
+		}
+		//action="/action_page_post.php"
+
+	</script>
+	<p>Insert user details below: </p>
+	<form name="myForm"  onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="name"><br>
+		Email: <input type="Email" name="email"><br><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<p id="errorMsg"></p>
+</body>
+</html>
